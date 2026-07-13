@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2P73L29BH7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2P73L29BH7');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JPG PDF 변환 — 사진을 PDF로, 무료·파일 무전송 | 바로PDF</title>
+<meta name="description" content="JPG·PNG 사진 여러 장을 PDF 한 파일로 만드는 무료 도구. A4/Letter/원본 크기와 여백 선택. 파일이 서버로 전송되지 않아 안전합니다.">
+<link rel="canonical" href="https://maestro24.github.io/baropdf/jpg-to-pdf.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JPG → PDF 변환 — 브라우저에서 바로, 파일 무전송">
+<meta property="og:description" content="사진·스캔본 여러 장을 순서대로 정리해 PDF 한 파일로. 업로드 없이 내 브라우저 안에서만 처리됩니다.">
+<meta property="og:url" content="https://maestro24.github.io/baropdf/jpg-to-pdf.html">
+<meta property="og:site_name" content="바로PDF">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e0433e' d='M7 2h13l7 7v19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z'/%3E%3Cpath fill='%23fbd9d7' d='M20 2l7 7h-7z'/%3E%3Ctext x='16' y='25' font-size='10' font-weight='bold' fill='white' text-anchor='middle' font-family='sans-serif'%3EPDF%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/components.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "바로PDF JPG→PDF 변환",
+      "url": "https://maestro24.github.io/baropdf/jpg-to-pdf.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "description": "JPG·PNG 이미지 여러 장을 용지·여백을 골라 PDF로 만드는 무료 브라우저 도구. 파일 무전송.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "어떤 이미지 형식을 지원하나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "JPG(JPEG)와 PNG를 지원합니다. 여러 장을 한 번에 올려 순서를 바꾼 뒤 PDF 한 파일로 만들 수 있습니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "용지 크기는 어떻게 선택하나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A4, Letter, 원본 크기 중 고를 수 있습니다. A4/Letter에서는 사진 비율을 유지한 채 페이지 중앙에 배치되고, 가로 사진은 자동으로 가로 용지가 됩니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "사진이 서버로 업로드되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요. PDF 생성이 전부 브라우저 안에서 실행되며 사진은 어디로도 전송되지 않습니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "사진 순서를 바꿀 수 있나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "네. 파일 목록에서 드래그하거나 위/아래 버튼으로 순서를 정하면 그 순서대로 PDF 페이지가 만들어집니다." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./index.html">📄 바로PDF</a>
+    <nav class="site-nav" aria-label="PDF 도구">
+      <a href="./merge.html">합치기</a>
+      <a href="./split.html">분할</a>
+      <a href="./compress.html">압축</a>
+      <a href="./pdf-to-jpg.html">PDF→JPG</a>
+      <a href="./jpg-to-pdf.html" aria-current="page">JPG→PDF</a>
+      <a href="./organize.html">페이지 정리</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-hero">
+    <h1>JPG → PDF 변환</h1>
+    <p class="sub">사진·스캔본 여러 장을 순서대로 정리해 PDF 한 파일로. 용지와 여백도 고를 수 있습니다.</p>
+    <span class="privacy-badge">🔒 사진이 서버로 전송되지 않습니다</span>
+  </section>
+
+  <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="이미지 파일 선택 또는 드래그">
+    <span class="dz-icon">📷</span>
+    <p class="dz-main">JPG·PNG 사진들을 여기에 끌어다 놓으세요</p>
+    <p class="dz-hint">클릭해서 선택할 수도 있습니다 · 여러 장 가능 · 순서 변경 가능</p>
+  </div>
+  <input type="file" id="file-input" class="visually-hidden" accept="image/jpeg,image/png,.jpg,.jpeg,.png" multiple>
+
+  <ul class="file-list is-empty" id="file-list" aria-label="선택한 사진 목록"></ul>
+
+  <div class="card">
+    <div class="options">
+      <label>
+        <span>용지 크기</span>
+        <select id="paper-select">
+          <option value="a4" selected>A4</option>
+          <option value="letter">Letter</option>
+          <option value="fit">원본 크기</option>
+        </select>
+      </label>
+      <label>
+        <span>여백</span>
+        <select id="margin-select">
+          <option value="0" selected>없음</option>
+          <option value="10">보통 (10mm)</option>
+          <option value="20">넓게 (20mm)</option>
+        </select>
+      </label>
+    </div>
+    <button type="button" class="btn-primary" id="run-btn" disabled>PDF 만들기 (사진 선택)</button>
+  </div>
+
+  <div class="progress-area" id="progress" aria-live="polite"></div>
+
+  <div class="result-card" id="result" hidden>
+    <h2>✅ 변환 완료</h2>
+    <p class="result-meta"></p>
+    <p>다운로드가 자동으로 시작됩니다. 원본 사진은 그대로 보존됩니다.</p>
+  </div>
+
+  <section class="content-section">
+    <h2>사진을 PDF로 만드는 방법 (3단계)</h2>
+    <ol class="steps">
+      <li>JPG·PNG 사진들을 위 상자에 끌어다 놓고 드래그로 순서를 정합니다.</li>
+      <li>용지 크기(A4/Letter/원본)와 여백을 선택합니다.</li>
+      <li>버튼을 누르면 사진들이 순서대로 담긴 PDF가 다운로드됩니다.</li>
+    </ol>
+  </section>
+
+  <section class="content-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>어떤 이미지 형식을 지원하나요?</h3>
+      <p>JPG(JPEG)와 PNG를 지원합니다. 여러 장을 한 번에 올려 순서를 바꾼 뒤 PDF 한 파일로 만들 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>용지 크기는 어떻게 선택하나요?</h3>
+      <p>A4, Letter, 원본 크기 중 고를 수 있습니다. A4/Letter에서는 사진 비율을 유지한 채 페이지 중앙에 배치되고, 가로 사진은 자동으로 가로 용지가 됩니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>사진이 서버로 업로드되나요?</h3>
+      <p>아니요. PDF 생성이 전부 브라우저 안에서 실행되며 사진은 어디로도 전송되지 않습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>사진 순서를 바꿀 수 있나요?</h3>
+      <p>네. 파일 목록에서 드래그하거나 위/아래 버튼으로 순서를 정하면 그 순서대로 PDF 페이지가 만들어집니다.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="trust-box">
+      <h2>사진이 안전한 이유</h2>
+      <p>PDF 생성 엔진(오픈소스 pdf-lib)이 브라우저 안에서 직접 실행됩니다. 사진을 받는 서버가 없어 업로드 자체가 불가능한 구조이며, 신분증·서류 스캔본 같은 민감한 사진도 안심하고 변환할 수 있습니다.</p>
+    </div>
+  </section>
+
+  <aside class="promo" data-coupang>
+    <div class="coupang-wrap">
+      <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
+    </div>
+    <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+  </aside>
+  <script>
+  setTimeout(function () {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
+    });
+  }, 4000);
+  </script>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="./index.html">홈</a></li>
+      <li><a href="./merge.html">PDF 합치기</a></li>
+      <li><a href="./split.html">PDF 분할</a></li>
+      <li><a href="./compress.html">PDF 압축</a></li>
+      <li><a href="./pdf-to-jpg.html">PDF JPG 변환</a></li>
+      <li><a href="./organize.html">페이지 정리</a></li>
+    </ul>
+    <p class="footer-note"><strong>파일 무전송</strong> — 모든 처리는 브라우저 안에서만 이루어지며 어떤 파일도 서버로 전송되지 않습니다.</p>
+    <p class="footer-note">© 2026 바로PDF</p>
+  </div>
+</footer>
+
+<script type="module" src="./js/pages/jpg-to-pdf.js"></script>
+
+<div class="side-rail side-l" data-coupang>
+  <script src="https://ads-partners.coupang.com/g.js"></script>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+<div class="side-rail side-r" data-coupang>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "baropdf",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "바로PDF — 브라우저 완결 PDF 도구 (정적 사이트, 빌드 없음)",
+  "scripts": {
+    "test": "node tests/run-all.mjs"
+  }
+}

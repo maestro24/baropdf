@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2P73L29BH7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2P73L29BH7');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF 페이지 순서 바꾸기·회전·삭제 — 무료, 파일 무전송 | 바로PDF</title>
+<meta name="description" content="PDF 페이지 썸네일을 드래그해 순서를 바꾸고, 회전·삭제한 뒤 저장하는 무료 도구. 파일이 서버로 전송되지 않아 안전합니다.">
+<link rel="canonical" href="https://maestro24.github.io/baropdf/organize.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PDF 페이지 정리 — 순서 변경·회전·삭제, 파일 무전송">
+<meta property="og:description" content="썸네일을 드래그해 페이지 순서를 바꾸고 회전·삭제 후 저장하세요. 업로드 없이 내 브라우저 안에서만.">
+<meta property="og:url" content="https://maestro24.github.io/baropdf/organize.html">
+<meta property="og:site_name" content="바로PDF">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e0433e' d='M7 2h13l7 7v19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z'/%3E%3Cpath fill='%23fbd9d7' d='M20 2l7 7h-7z'/%3E%3Ctext x='16' y='25' font-size='10' font-weight='bold' fill='white' text-anchor='middle' font-family='sans-serif'%3EPDF%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/components.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "바로PDF 페이지 정리",
+      "url": "https://maestro24.github.io/baropdf/organize.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "description": "PDF 페이지를 썸네일로 보며 순서 변경·회전·삭제 후 저장하는 무료 브라우저 도구. 파일 무전송.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "페이지 순서는 어떻게 바꾸나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PDF를 올리면 페이지 썸네일이 격자로 표시됩니다. 썸네일을 마우스로 끌어 원하는 위치에 놓으면 순서가 바뀝니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "페이지 회전과 삭제도 되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "네. 각 썸네일 아래 버튼으로 왼쪽/오른쪽 90도 회전과 삭제가 가능하며, 저장 버튼을 누르면 변경 사항이 적용된 새 PDF가 다운로드됩니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "원본 파일이 변경되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요. 결과는 항상 새 파일로 다운로드되며 원본 PDF는 그대로 보존됩니다. 처음부터 다시 편집하려면 되돌리기 버튼을 누르세요." }
+        },
+        {
+          "@type": "Question",
+          "name": "편집할 때 파일이 서버로 업로드되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요. 썸네일 생성과 저장이 전부 브라우저 안에서 실행되며 파일은 어디로도 전송되지 않습니다." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./index.html">📄 바로PDF</a>
+    <nav class="site-nav" aria-label="PDF 도구">
+      <a href="./merge.html">합치기</a>
+      <a href="./split.html">분할</a>
+      <a href="./compress.html">압축</a>
+      <a href="./pdf-to-jpg.html">PDF→JPG</a>
+      <a href="./jpg-to-pdf.html">JPG→PDF</a>
+      <a href="./organize.html" aria-current="page">페이지 정리</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-hero">
+    <h1>PDF 페이지 순서 바꾸기</h1>
+    <p class="sub">썸네일을 드래그해 순서를 바꾸고, 회전·삭제한 뒤 저장하세요.</p>
+    <span class="privacy-badge">🔒 파일이 서버로 전송되지 않습니다</span>
+  </section>
+
+  <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="PDF 파일 선택 또는 드래그">
+    <span class="dz-icon">🔀</span>
+    <p class="dz-main">정리할 PDF를 여기에 끌어다 놓으세요</p>
+    <p class="dz-hint">클릭해서 선택할 수도 있습니다 · 1개 파일</p>
+  </div>
+  <input type="file" id="file-input" class="visually-hidden" accept="application/pdf,.pdf">
+
+  <p class="field-hint" id="file-info" hidden style="margin-top:12px;text-align:center;font-size:0.9rem"></p>
+
+  <ul class="thumb-grid" id="thumb-grid" aria-label="페이지 썸네일"></ul>
+
+  <div id="organize-toolbar" hidden>
+    <button type="button" class="btn-primary" id="run-btn" disabled>변경 사항 저장 (새 PDF 다운로드)</button>
+    <p style="text-align:center;margin:10px 0 0"><button type="button" class="btn-secondary" id="reset-btn">↺ 처음 상태로 되돌리기</button></p>
+  </div>
+
+  <div class="progress-area" id="progress" aria-live="polite"></div>
+
+  <div class="result-card" id="result" hidden>
+    <h2>✅ 저장 완료</h2>
+    <p class="result-meta"></p>
+    <p>다운로드가 자동으로 시작됩니다. 원본 파일은 그대로 보존됩니다.</p>
+  </div>
+
+  <section class="content-section">
+    <h2>페이지 정리하는 방법 (3단계)</h2>
+    <ol class="steps">
+      <li>정리할 PDF를 위 상자에 끌어다 놓으면 페이지 썸네일이 표시됩니다.</li>
+      <li>썸네일을 드래그해 순서를 바꾸고, ⟲⟳ 버튼으로 회전, ✕ 버튼으로 삭제합니다.</li>
+      <li>"변경 사항 저장"을 누르면 정리된 새 PDF가 다운로드됩니다.</li>
+    </ol>
+  </section>
+
+  <section class="content-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>페이지 순서는 어떻게 바꾸나요?</h3>
+      <p>PDF를 올리면 페이지 썸네일이 격자로 표시됩니다. 썸네일을 마우스로 끌어 원하는 위치에 놓으면 순서가 바뀝니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>페이지 회전과 삭제도 되나요?</h3>
+      <p>네. 각 썸네일 아래 버튼으로 왼쪽/오른쪽 90도 회전과 삭제가 가능하며, 저장 버튼을 누르면 변경 사항이 적용된 새 PDF가 다운로드됩니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>원본 파일이 변경되나요?</h3>
+      <p>아니요. 결과는 항상 새 파일로 다운로드되며 원본 PDF는 그대로 보존됩니다. 처음부터 다시 편집하려면 되돌리기 버튼을 누르세요.</p>
+    </div>
+    <div class="faq-item">
+      <h3>편집할 때 파일이 서버로 업로드되나요?</h3>
+      <p>아니요. 썸네일 생성과 저장이 전부 브라우저 안에서 실행되며 파일은 어디로도 전송되지 않습니다.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="trust-box">
+      <h2>파일이 안전한 이유</h2>
+      <p>썸네일은 Mozilla PDF.js가, 저장은 pdf-lib이 브라우저 안에서 직접 처리합니다. 파일을 받는 서버가 없어 업로드 자체가 불가능한 구조이며, 원본 파일은 절대 변경되지 않습니다.</p>
+    </div>
+  </section>
+
+  <aside class="promo" data-coupang>
+    <div class="coupang-wrap">
+      <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
+    </div>
+    <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+  </aside>
+  <script>
+  setTimeout(function () {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
+    });
+  }, 4000);
+  </script>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="./index.html">홈</a></li>
+      <li><a href="./merge.html">PDF 합치기</a></li>
+      <li><a href="./split.html">PDF 분할</a></li>
+      <li><a href="./compress.html">PDF 압축</a></li>
+      <li><a href="./pdf-to-jpg.html">PDF JPG 변환</a></li>
+      <li><a href="./jpg-to-pdf.html">JPG PDF 변환</a></li>
+    </ul>
+    <p class="footer-note"><strong>파일 무전송</strong> — 모든 처리는 브라우저 안에서만 이루어지며 어떤 파일도 서버로 전송되지 않습니다.</p>
+    <p class="footer-note">© 2026 바로PDF</p>
+  </div>
+</footer>
+
+<script type="module" src="./js/pages/organize.js"></script>
+
+<div class="side-rail side-l" data-coupang>
+  <script src="https://ads-partners.coupang.com/g.js"></script>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+<div class="side-rail side-r" data-coupang>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+</body>
+</html>

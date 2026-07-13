@@ -1,0 +1,554 @@
+/* ============================================================
+   바로PDF 컴포넌트 스타일 (도구 UI·콘텐츠 섹션)
+   ============================================================ */
+
+/* ---------- 드롭존 ---------- */
+.dropzone {
+  border: 2.5px dashed var(--accent-soft-2);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 52px 24px;
+  text-align: center;
+  cursor: pointer;
+  margin: 24px 0 0;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.dropzone:hover,
+.dropzone:focus-visible {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+  outline: none;
+}
+
+.dropzone.is-dragover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: scale(1.01);
+}
+
+.dropzone .dz-icon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.dropzone .dz-main {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.dropzone .dz-hint {
+  color: var(--ink-faint);
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ---------- 파일 리스트 ---------- */
+.file-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-list.is-empty {
+  display: none;
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  cursor: grab;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.file-row:hover {
+  border-color: var(--accent-soft-2);
+  box-shadow: var(--shadow);
+}
+
+.file-row.is-dragging {
+  opacity: 0.5;
+}
+
+.file-order {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.92rem;
+}
+
+.file-size {
+  flex: none;
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+}
+
+.file-actions {
+  flex: none;
+  display: flex;
+  gap: 4px;
+}
+
+.icon-btn {
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-soft);
+  border-radius: 7px;
+  width: 28px;
+  height: 28px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  border-color: var(--accent-soft-2);
+}
+
+/* ---------- 옵션 ---------- */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  align-items: center;
+}
+
+.options label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.options select,
+.options input[type='text'],
+.options input[type='number'] {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--ink);
+}
+
+.options input[type='text'] {
+  min-width: 180px;
+}
+
+.options select:focus,
+.options input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.seg {
+  display: inline-flex;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.seg button {
+  font: inherit;
+  font-size: 0.86rem;
+  padding: 7px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.seg button[aria-pressed='true'] {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.field-hint {
+  width: 100%;
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+  margin: -6px 0 0;
+}
+
+/* ---------- 버튼 ---------- */
+.btn-primary {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+  border: 0;
+  border-radius: var(--radius);
+  padding: 15px 20px;
+  cursor: pointer;
+  margin: 18px 0 0;
+  box-shadow: 0 6px 18px rgba(224, 67, 62, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 8px 22px rgba(224, 67, 62, 0.34);
+}
+
+.btn-primary:disabled {
+  background: #d7d5d2;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-block;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-soft-2);
+}
+
+/* ---------- 진행률 ---------- */
+.progress-area {
+  margin: 18px 0 0;
+}
+
+.progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #f0776f);
+  transition: width 0.25s ease;
+}
+
+.progress-label {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+.progress-area.is-error .progress-track {
+  display: none;
+}
+
+.progress-area.is-error .progress-label {
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-soft-2);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+/* ---------- 결과 카드 ---------- */
+.result-card {
+  background: var(--ok-soft);
+  border: 1px solid #c9ecdd;
+  border-radius: var(--radius);
+  padding: 22px;
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.result-card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+
+.result-meta {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 0 0 14px;
+}
+
+.size-compare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.size-compare .before {
+  color: var(--ink-faint);
+  text-decoration: line-through;
+}
+
+.size-compare .arrow {
+  color: var(--ink-faint);
+}
+
+.size-compare .after {
+  color: var(--ok);
+  font-size: 1.2rem;
+}
+
+.size-compare .saved {
+  background: var(--ok);
+  color: #fff;
+  font-size: 0.78rem;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* ---------- 썸네일 그리드 (organize) ---------- */
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  gap: 14px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thumb-cell {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  text-align: center;
+  cursor: grab;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.thumb-cell:hover {
+  border-color: var(--accent-soft-2);
+  box-shadow: var(--shadow);
+}
+
+.thumb-cell.is-dragging {
+  opacity: 0.45;
+  border-color: var(--accent);
+}
+
+.thumb-cell.is-dropover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.thumb-img-wrap {
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--bg);
+  margin-bottom: 6px;
+}
+
+.thumb-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(31, 36, 48, 0.18);
+}
+
+.thumb-num {
+  font-size: 0.76rem;
+  color: var(--ink-faint);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.thumb-tools {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* ---------- 홈 허브 ---------- */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+  margin: 26px 0;
+}
+
+.tool-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 18px;
+  color: var(--ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-soft-2);
+  text-decoration: none;
+}
+
+.tool-card .tc-icon {
+  font-size: 1.7rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tool-card h2,
+.tool-card h3 {
+  font-size: 1.02rem;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+
+.tool-card p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ---------- SEO/신뢰 섹션 ---------- */
+.content-section {
+  margin: 44px 0;
+}
+
+.content-section h2 {
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+
+.content-section h3 {
+  font-size: 1.02rem;
+  margin: 18px 0 6px;
+}
+
+.content-section p,
+.content-section li {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.steps li {
+  counter-increment: step;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px 14px 54px;
+  position: relative;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin: 0 0 10px;
+}
+
+.faq-item h3 {
+  margin: 0 0 6px;
+  font-size: 0.98rem;
+}
+
+.faq-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.trust-box {
+  background: linear-gradient(135deg, #fff, var(--accent-soft));
+  border: 1px solid var(--accent-soft-2);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.trust-box ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+

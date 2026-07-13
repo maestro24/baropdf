@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2P73L29BH7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2P73L29BH7');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF 합치기 — 무료, 무제한, 파일 무전송 | 바로PDF</title>
+<meta name="description" content="여러 PDF 파일을 원하는 순서로 하나로 합치는 무료 도구. 파일이 서버로 전송되지 않아 계약서·회사 문서도 안전합니다. 용량 제한·워터마크 없음.">
+<link rel="canonical" href="https://maestro24.github.io/baropdf/merge.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PDF 합치기 — 브라우저에서 바로, 파일 무전송">
+<meta property="og:description" content="여러 PDF를 드래그해 순서를 정하고 하나로 합치세요. 업로드 없이 내 브라우저 안에서만 처리됩니다.">
+<meta property="og:url" content="https://maestro24.github.io/baropdf/merge.html">
+<meta property="og:site_name" content="바로PDF">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e0433e' d='M7 2h13l7 7v19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z'/%3E%3Cpath fill='%23fbd9d7' d='M20 2l7 7h-7z'/%3E%3Ctext x='16' y='25' font-size='10' font-weight='bold' fill='white' text-anchor='middle' font-family='sans-serif'%3EPDF%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/components.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "바로PDF 합치기",
+      "url": "https://maestro24.github.io/baropdf/merge.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "ko",
+      "description": "여러 PDF 파일을 순서를 정해 하나로 합치는 무료 브라우저 도구. 파일 무전송.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "PDF 합치기는 몇 개까지 가능한가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "개수 제한이 없습니다. 브라우저 메모리가 허용하는 한 수십 개의 PDF도 한 번에 합칠 수 있습니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "합칠 때 파일이 서버로 업로드되나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요. 합치기 처리는 전부 사용자의 브라우저 안에서 실행되며 파일은 어디로도 전송되지 않습니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "합치는 순서를 바꿀 수 있나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "네. 파일 목록에서 드래그하거나 위/아래 버튼으로 순서를 자유롭게 바꾼 뒤 합칠 수 있습니다." }
+        },
+        {
+          "@type": "Question",
+          "name": "암호가 걸린 PDF도 합칠 수 있나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "암호로 보호된 PDF는 먼저 PDF 뷰어에서 암호를 해제한 뒤 합쳐야 합니다. 도구가 자동으로 감지해 안내합니다." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./index.html">📄 바로PDF</a>
+    <nav class="site-nav" aria-label="PDF 도구">
+      <a href="./merge.html" aria-current="page">합치기</a>
+      <a href="./split.html">분할</a>
+      <a href="./compress.html">압축</a>
+      <a href="./pdf-to-jpg.html">PDF→JPG</a>
+      <a href="./jpg-to-pdf.html">JPG→PDF</a>
+      <a href="./organize.html">페이지 정리</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="tool-hero">
+    <h1>PDF 합치기</h1>
+    <p class="sub">여러 PDF를 원하는 순서로 하나로. 드래그로 순서를 바꾸고 버튼 한 번이면 끝납니다.</p>
+    <span class="privacy-badge">🔒 파일이 서버로 전송되지 않습니다</span>
+  </section>
+
+  <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="PDF 파일 선택 또는 드래그">
+    <span class="dz-icon">🧩</span>
+    <p class="dz-main">PDF 파일들을 여기에 끌어다 놓으세요</p>
+    <p class="dz-hint">클릭해서 선택할 수도 있습니다 · 2개 이상 · 순서 변경 가능</p>
+  </div>
+  <input type="file" id="file-input" class="visually-hidden" accept="application/pdf,.pdf" multiple>
+
+  <ul class="file-list is-empty" id="file-list" aria-label="선택한 파일 목록"></ul>
+
+  <button type="button" class="btn-primary" id="run-btn" disabled>PDF 합치기 (2개 이상 선택)</button>
+
+  <div class="progress-area" id="progress" aria-live="polite"></div>
+
+  <div class="result-card" id="result" hidden>
+    <h2>✅ 합치기 완료</h2>
+    <p class="result-meta"></p>
+    <p>다운로드가 자동으로 시작됩니다. 시작되지 않으면 다시 시도해 주세요.</p>
+  </div>
+
+  <section class="content-section">
+    <h2>PDF 합치는 방법 (3단계)</h2>
+    <ol class="steps">
+      <li>합칠 PDF 파일들을 위 상자에 끌어다 놓거나 클릭해 선택합니다.</li>
+      <li>파일 목록에서 드래그하거나 ▲▼ 버튼으로 합쳐질 순서를 정합니다.</li>
+      <li>"PDF 합치기" 버튼을 누르면 합쳐진 파일이 바로 다운로드됩니다.</li>
+    </ol>
+  </section>
+
+  <section class="content-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item">
+      <h3>PDF 합치기는 몇 개까지 가능한가요?</h3>
+      <p>개수 제한이 없습니다. 브라우저 메모리가 허용하는 한 수십 개의 PDF도 한 번에 합칠 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>합칠 때 파일이 서버로 업로드되나요?</h3>
+      <p>아니요. 합치기 처리는 전부 사용자의 브라우저 안에서 실행되며 파일은 어디로도 전송되지 않습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>합치는 순서를 바꿀 수 있나요?</h3>
+      <p>네. 파일 목록에서 드래그하거나 위/아래 버튼으로 순서를 자유롭게 바꾼 뒤 합칠 수 있습니다.</p>
+    </div>
+    <div class="faq-item">
+      <h3>암호가 걸린 PDF도 합칠 수 있나요?</h3>
+      <p>암호로 보호된 PDF는 먼저 PDF 뷰어에서 암호를 해제한 뒤 합쳐야 합니다. 도구가 자동으로 감지해 안내합니다.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="trust-box">
+      <h2>파일이 안전한 이유</h2>
+      <p>바로PDF에는 파일을 받는 서버가 없습니다. 합치기 엔진(오픈소스 pdf-lib)이 브라우저 안에서 직접 실행되어, 파일은 내 컴퓨터의 메모리에서만 처리되고 결과는 새 파일로 다운로드됩니다. 원본은 절대 변경되지 않습니다.</p>
+    </div>
+  </section>
+
+  <aside class="promo" data-coupang>
+    <div class="coupang-wrap">
+      <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
+    </div>
+    <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+  </aside>
+  <script>
+  setTimeout(function () {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
+    });
+  }, 4000);
+  </script>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="./index.html">홈</a></li>
+      <li><a href="./split.html">PDF 분할</a></li>
+      <li><a href="./compress.html">PDF 압축</a></li>
+      <li><a href="./pdf-to-jpg.html">PDF JPG 변환</a></li>
+      <li><a href="./jpg-to-pdf.html">JPG PDF 변환</a></li>
+      <li><a href="./organize.html">페이지 정리</a></li>
+    </ul>
+    <p class="footer-note"><strong>파일 무전송</strong> — 모든 처리는 브라우저 안에서만 이루어지며 어떤 파일도 서버로 전송되지 않습니다.</p>
+    <p class="footer-note">© 2026 바로PDF</p>
+  </div>
+</footer>
+
+<script type="module" src="./js/pages/merge.js"></script>
+
+<div class="side-rail side-l" data-coupang>
+  <script src="https://ads-partners.coupang.com/g.js"></script>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+<div class="side-rail side-r" data-coupang>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+</body>
+</html>
