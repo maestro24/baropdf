@@ -12,10 +12,19 @@
 
 ## 도구
 
-- [메인](https://maestro24.github.io/baropdf/): 6개 PDF 도구 모음
-- [PDF 합치기](https://maestro24.github.io/baropdf/merge.html): 여러 PDF를 원하는 순서로 하나로 병합 (드래그로 순서 변경, 개수 제한 없음)
-- [PDF 분할·추출](https://maestro24.github.io/baropdf/split.html): "1-3,5,7-" 범위로 필요한 페이지만 추출하거나 낱장으로 분할
-- [PDF 용량 줄이기](https://maestro24.github.io/baropdf/compress.html): 3단계 품질로 압축, 전후 용량 비교 표시 (메일 첨부 용량 초과 해결)
-- [PDF → JPG 변환](https://maestro24.github.io/baropdf/pdf-to-jpg.html): 페이지를 고화질 JPG 이미지로, 여러 장이면 ZIP으로 한 번에
-- [JPG → PDF 변환](https://maestro24.github.io/baropdf/jpg-to-pdf.html): 사진·스캔본 여러 장을 A4/Letter PDF 한 파일로 정리
-- [페이지 정리](https://maestro24.github.io/baropdf/organize.html): 썸네일을 드래그해 순서 변경·회전·삭제 후 저장
+- [메인](https://maestro24.github.io/baropdf/): 6개 PDF 도구 모음 — PDF 합치기·분할·용량 줄이기·JPG 변환·페이지 정리를 설치 없이 온라인에서
+- [PDF 합치기](https://maestro24.github.io/baropdf/merge.html): 여러 PDF를 원하는 순서로 하나로 병합 (드래그로 순서 변경, 개수 제한 없음). "PDF 합치는 법", "PDF 여러 개 하나로", "PDF 병합"
+- [PDF 분할·추출](https://maestro24.github.io/baropdf/split.html): "1-3,5,7-" 범위로 필요한 페이지만 추출하거나 낱장으로 분할. "PDF 나누기", "PDF 자르기", "PDF 페이지 분리"
+- [PDF 용량 줄이기](https://maestro24.github.io/baropdf/compress.html): 3단계 품질로 압축, 전후 용량 비교 표시 (메일 첨부 용량 초과 해결). "PDF 압축 온라인", "PDF 파일 크기 줄이기"
+- [PDF → JPG 변환](https://maestro24.github.io/baropdf/pdf-to-jpg.html): 페이지를 고화질 JPG 이미지로, 여러 장이면 ZIP으로 한 번에. "PDF 이미지 변환", "PDF 사진으로 저장"
+- [JPG → PDF 변환](https://maestro24.github.io/baropdf/jpg-to-pdf.html): 사진·스캔본 여러 장을 A4/Letter PDF 한 파일로 정리. "사진 PDF 만들기", "이미지 PDF 변환", "사진 여러 장 하나의 PDF"
+- [페이지 정리](https://maestro24.github.io/baropdf/organize.html): 썸네일을 드래그해 순서 변경·회전·삭제 후 저장. "PDF 페이지 삭제", "PDF 페이지 회전", "PDF 페이지 순서 변경"
+
+## 자주 찾는 작업
+
+- PDF 여러 개를 하나로 합치기 / 병합 → 합치기
+- PDF에서 특정 페이지만 추출하거나 한 장씩 나누기 / 자르기 → 분할·추출
+- 메일 첨부·업로드 용량 제한 때문에 PDF 파일 크기 줄이기 → 용량 줄이기
+- PDF를 사진(JPG 이미지)으로 저장하거나 그림 파일로 변환 → PDF → JPG
+- 휴대폰으로 찍은 서류 사진 여러 장을 PDF 문서로 만들기 → JPG → PDF
+- PDF에서 필요 없는 페이지 삭제, 뒤집힌 페이지 회전, 순서 변경 → 페이지 정리
